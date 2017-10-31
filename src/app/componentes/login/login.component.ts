@@ -3,6 +3,8 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import {Subscription} from "rxjs";
 import {TimerObservable} from "rxjs/observable/TimerObservable";
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -26,15 +28,44 @@ export class LoginComponent implements OnInit {
       this.progreso=0;
       this.ProgresoDeAncho="0%";
 
+      localStorage.setItem("usuarioAdmin","admin");
+      localStorage.setItem("claveAdmin","11");
+
+      localStorage.setItem("usuarioJ1","j1");
+      localStorage.setItem("claveJ1","44");
+
+      localStorage.setItem("usuarioJ2","j2");
+      localStorage.setItem("claveJ2","55");
+
+      /*localStorage.setItem("usuarioNuevo","null");
+      localStorage.setItem("claveNuevo","null");*/
   }
 
   ngOnInit() {
   }
 
   Entrar() {
-    if (this.usuario === 'admin' && this.clave === 'admin') {
+    /*if (this.usuario === 'admin' && this.clave === 'admin') {
       this.router.navigate(['/Principal']);
-    }
+      */
+
+      if ( this.usuario==localStorage.getItem("usuarioAdmin") && this.clave ==localStorage.getItem("claveAdmin") || 
+        this.usuario==localStorage.getItem("usuarioJ1") && this.clave ==localStorage.getItem("claveJ1") ||
+      this.usuario==localStorage.getItem("usuarioJ2") && this.clave ==localStorage.getItem("claveJ2") ||
+      localStorage.getItem("usuarioNuevo") != "null" && this.usuario==localStorage.getItem("usuarioNuevo") && this.clave ==localStorage.getItem("claveNuevo") 
+      ) 
+      {
+        this.router.navigate(['/Principal']);
+       }
+    else
+      {
+        alert("Error de usuario y contraseña. Reingrese");
+       this.clave='';
+       this.usuario='';
+       this.logeando=true;
+       this.progreso=0;
+       this.ProgresoDeAncho="0%";
+      }
   }
   MoverBarraDeProgreso() {
     
@@ -77,5 +108,24 @@ export class LoginComponent implements OnInit {
     });
     //this.logeando=true;
   }
+
+
+  loguearseComoAdm()
+  {this.usuario="admin";
+  this.clave="11";
+
+  }
+  loguearseComoJ1()
+  {
+    this.usuario="j1";
+    this.clave="44"; 
+  }
+
+  loguearseComoJ2()
+  {
+    this.usuario="j2";
+    this.clave="55"; 
+  }
+
 
 }
