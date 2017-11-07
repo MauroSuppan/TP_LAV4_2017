@@ -26,6 +26,7 @@ export class AnagramaComponent implements OnInit {
     this.nuevoJuego.generarPalabra();
     this.contador=0;
     this.ocultarVerificar=false;
+    this.nuevoJuego.gano=false;
   }
 
   verificar()

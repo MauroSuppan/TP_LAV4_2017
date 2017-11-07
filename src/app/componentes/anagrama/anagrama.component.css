@@ -1,8 +1,9 @@
 
+
 form {
     border: 10px solid #f1f1f1;
     padding: 10px;
-    background:gray;
+    background:  #EDA8A8;
 }
 
 input[type=text], input[type=password] {
@@ -87,6 +88,8 @@ span.psw {
 }
 #snackbar.Ganador {
     background-color: #059F2F;
+   height: 1.5cm;
+    top: 200px;
 }
 #snackbar.Perdedor {
     background-color: #FF0000;

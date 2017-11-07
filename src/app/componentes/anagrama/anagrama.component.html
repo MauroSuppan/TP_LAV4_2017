@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="fondo">
 <div style="text-align:center">
   <h1>
     {{nuevoJuego.nombre}}!
@@ -14,6 +16,8 @@
     <h1>{{nuevoJuego.palabraDesordenada}}  </h1>
     <label>Ingrese palabra de manera correcta:  </label> <br> <input [(ngModel)]="nuevoJuego.palabraIngresada" placeholder="ingrese palabra" name="palabraOrdenadaa" type="text" class="form-control" style="width:50%"/>
  
+    
+
     <h2 [hidden]="ocultarVerificar"><button  *ngIf="nuevoJuego.esperando!=0" (click)="verificar()" class="btn btn-success btn-lg">Verificar</button></h2>
  
     <h2><button *ngIf="nuevoJuego.palabraDesordenada!=null " (click)="generarPalabra()"  class="btn btn-info btn-lg">Dame una palabra desordenada</button></h2>
@@ -25,5 +29,6 @@
 
 
 </form>
-<div id="snackbar">{{Mensajes}}</div>
 
+<div id="snackbar">{{Mensajes}}</div>
+</div>
