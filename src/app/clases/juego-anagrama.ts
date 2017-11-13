@@ -60,6 +60,8 @@ palabras : Array<any>=[
           this.palabraDesordenada="";
           this.palabraIngresada="";
           this.esperando=0;
+
+          
         }
         if (this.gano) {
           return true;

@@ -12,14 +12,18 @@ export class AnagramaComponent implements OnInit {
   Mensajes:string;
   contador:number;
   ocultarVerificar:boolean;
-  
-
  
+  resultados  : Array<JuegoAnagrama> = new Array<JuegoAnagrama>();
 
   constructor() {
     this.nuevoJuego = new JuegoAnagrama();
-    //console.info("numero Secreto:",this.nuevoJuego.numeroSecreto);  
     this.ocultarVerificar=true;
+
+    if(localStorage.getItem("resultados")!=null)
+      {
+    this.resultados = JSON.parse(localStorage.getItem("resultados"));
+      }
+
    }
 
    generarPalabra() {
@@ -31,16 +35,25 @@ export class AnagramaComponent implements OnInit {
 
   verificar()
   {
+
     this.contador++;
     this.ocultarVerificar=true;
+    
     //console.info("numero Secreto:",this.nuevoJuego.gano);  
     if (this.nuevoJuego.verificar()){
       
      // this.enviarJuego.emit(this.nuevoJuego);
       this.MostarMensaje("Sos un Genio!!!",true);
-  
+    
+      this.resultados.push(new JuegoAnagrama(this.nuevoJuego.nombre,this.nuevoJuego.gano,this.nuevoJuego.jugador));
+      console.log(this.resultados);
+      localStorage.setItem("resultados",JSON.stringify(this.resultados));
 
     }else{
+      this.resultados.push(new JuegoAnagrama(this.nuevoJuego.nombre,this.nuevoJuego.gano,this.nuevoJuego.jugador));  
+      console.log(this.resultados);
+      localStorage.setItem("resultados",JSON.stringify(this.resultados));
+ 
 
       let mensaje:string;
       switch (this.contador) {
@@ -66,12 +79,16 @@ export class AnagramaComponent implements OnInit {
         default:
             mensaje="Ya le erraste "+ this.contador+" veces";
           break;
+          
       }
       this.MostarMensaje("#"+this.contador+" "+mensaje+" ayuda :"+this.nuevoJuego.retornarAyuda());
-     
+
+   
 
     }
     console.info("numero Secreto:",this.nuevoJuego.gano);  
+
+    
   }  
 
   MostarMensaje(mensaje:string="este es el mensaje",ganador:boolean=false) {

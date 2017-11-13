@@ -1,0 +1,220 @@
+.fondo
+{
+    background-color:lightblue;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    -webkit-background-size : cover;
+    -moz-background-size : cover;
+    -moz-background-size : cover;
+    background-size: cover;
+    margin:0;
+    padding:1px;
+}
+
+
+.botonPiedra{
+
+    width: 326px;
+    height: 380px;
+    -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    font-size: 40px;
+   
+    color: black;
+    
+    background: url("../../../assets/imagenes/piedraa.jpg") no-repeat; 
+    background-size: 326px 380px;
+
+    border-color:red;
+    border-width: 2px;
+    border-style: solid;
+    margin-left: 2cm;
+}
+
+.botonPapel{
+    
+        width: 326px;
+        height: 380px;
+        -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        font-size: 40px;
+       
+        color: black;
+        
+        background: url("../../../assets/imagenes/papel.jpg") no-repeat; 
+        background-size: 326px 380px;
+    
+        border-color:red;
+        border-width: 2px;
+        border-style: solid;
+
+        margin-left: 2cm;
+    }
+
+    .botonTijera
+    {
+        width: 326px;
+        height: 380px;
+        -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        font-size: 40px;
+       
+        color: black;
+        
+        background: url("../../../assets/imagenes/tijera.jpg") no-repeat; 
+        background-size: 326px 380px;
+    
+        border-color:red;
+        border-width: 2px;
+        border-style: solid;
+
+        margin-left: 2cm;
+    }
+
+    p{
+        color: #E6E65F;
+        margin-left: 14cm;
+    }
+
+form {
+    border: 10px solid lightpink;
+    padding: 10px;
+    background:gray;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    /*background-color: #4CAF50;*/
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+.aceptbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #3664F4;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+
+#snackbar {
+
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #000000;
+
+    border-width: 4px;
+    border-style: solid;
+
+
+
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+   
+    color: #fff;
+    text-align: center;
+   
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 22px;
+}
+#snackbar.Ganador {
+  
+
+    background-color: #059F2F;
+    border-color:#013401;
+   
+}
+#snackbar.Perdedor {
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #000000;
+
+    background-color: #FF0000;
+}
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

@@ -1,9 +1,15 @@
+.fondo
+{
+    height:100%;
+    background-color:lightblue;
+   
 
+}
 
 form {
-    border: 10px solid #f1f1f1;
+    border: 10px solid lightpink;
     padding: 10px;
-    background:  #EDA8A8;
+    background:  grey;
 }
 
 input[type=text], input[type=password] {

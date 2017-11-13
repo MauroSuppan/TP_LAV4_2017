@@ -37,8 +37,6 @@ export class LoginComponent implements OnInit {
       localStorage.setItem("usuarioJ2","j2");
       localStorage.setItem("claveJ2","55");
 
-      /*localStorage.setItem("usuarioNuevo","null");
-      localStorage.setItem("claveNuevo","null");*/
   }
 
   ngOnInit() {
@@ -55,6 +53,7 @@ export class LoginComponent implements OnInit {
       localStorage.getItem("usuarioNuevo") != "null" && this.usuario==localStorage.getItem("usuarioNuevo") && this.clave ==localStorage.getItem("claveNuevo") 
       ) 
       {
+        localStorage.setItem("jugadorConectado",this.usuario);
         this.router.navigate(['/Principal']);
        }
     else

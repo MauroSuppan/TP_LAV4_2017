@@ -12,7 +12,16 @@ height: 70px;
     color: #100000;
     }
 
-   .prueba
+   .fondo
    {
-       background-color: #590303;
+    background-color:lightblue;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    -webkit-background-size : cover;
+    -moz-background-size : cover;
+    -moz-background-size : cover;
+    background-size: cover;
+    margin:0;
+    padding:1px;
    }
