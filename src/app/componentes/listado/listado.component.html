@@ -12,3 +12,22 @@
   
 <app-listado-de-resultados [listado]="listadoParaCompartir"> </app-listado-de-resultados>
 
+
+<button class="btn btn-success"(click)="Ganadores()">Ver solo ganadores</button>
+<br>
+<button class="btn btn-danger" (click)="Perdedores()">Ver solo perdedores</button>
+<br>
+<button class="btn btn-info" (click)="VerTodos()">Ver Todos los resultados</button>
+<br>
+<br>
+
+<div class="seleccion">
+    <select [(ngModel)]="juego">
+      <option value="Complete la frase">Complete la frase</option>
+      <option value="Agilidad aritmética">Agilidad aritmética</option>
+      <option value="Piedra, papel o tijera">Piedra, papel o tijera</option>
+      <option value="Adivina el número">Adivina el número</option>
+      <option value="Anagrama">Anagrama</option>
+    </select>
+    </div>
+    <button class="btn btn-info"(click)="MostrarPorJuego(juego)">Seleccione un juego y presione</button>

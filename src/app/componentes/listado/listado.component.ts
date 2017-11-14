@@ -9,8 +9,12 @@ import { JuegoServiceService } from '../../servicios/juego-service.service';
 export class ListadoComponent implements OnInit {
   public listadoParaCompartir: Array<any>;
    miServicioJuego:JuegoServiceService
+
+   juego:string;
   constructor(servicioJuego:JuegoServiceService) { 
     this.miServicioJuego = servicioJuego;
+
+    
   
 //listado apra compartir tomado del local storage
     this.listadoParaCompartir=JSON.parse(localStorage.getItem("resultados"));
@@ -31,4 +35,40 @@ export class ListadoComponent implements OnInit {
         this.listadoParaCompartir = listado;
     });
   }
+
+  VerTodos()
+  {
+    this.listadoParaCompartir=JSON.parse(localStorage.getItem("resultados"));
+  }
+
+  Ganadores()
+  {
+    this.listadoParaCompartir=JSON.parse(localStorage.getItem("resultados"));
+    this.listadoParaCompartir=this.listadoParaCompartir.filter(function(data)
+    {
+      //data tiene las propiedades de  listadoParaCompartir
+      return data.gano ==true;
+    });
+  }
+
+  Perdedores()
+  {
+    this.listadoParaCompartir=JSON.parse(localStorage.getItem("resultados"));
+    this.listadoParaCompartir=this.listadoParaCompartir.filter(function(data)
+    {
+      return data.gano ==false;
+    });
+  }
+
+  MostrarPorJuego(juego : string)
+  {
+    this.listadoParaCompartir=JSON.parse(localStorage.getItem("resultados"));
+    this.listadoParaCompartir = this.listadoParaCompartir.filter(function(data)
+          {
+            return data.nombre == juego; 
+          });
+          this.juego="";
+  }
+
+
 }
