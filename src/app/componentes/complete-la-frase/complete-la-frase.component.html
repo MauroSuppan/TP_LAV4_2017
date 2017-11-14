@@ -1,0 +1,56 @@
+<div class="fondo">
+  <form name="juego" >
+  <ul>
+ 
+      <div *ngIf=nuevoJuego.fraseUno>
+<h1>"Hay un <input type="text"  [(ngModel)]='nuevoJuego.palabraIngresada' [ngModelOptions]="{standalone: true}">que pido siempre que pasa un tren"</h1>
+      </div>
+
+ <div *ngIf=nuevoJuego.fraseDos>
+  <h1>"Ella multimillonaria y de mas alto   <input type="text"  [(ngModel)]='nuevoJuego.palabraIngresada' [ngModelOptions]="{standalone: true}">termino la secundaria con un promedio de 10"</h1>
+     </div>
+               
+ <div *ngIf=nuevoJuego.fraseTres>
+<h1>"Todo sigue igual de bien, siguen los<input type="text"  [(ngModel)]='nuevoJuego.palabraIngresada' [ngModelOptions]="{standalone: true}"> que quiero tener, no me puedo quejar"</h1>
+      </div>
+
+      <div *ngIf=nuevoJuego.fraseCuatro>
+    <h1>"Es verdad que el <input type="text"  [(ngModel)]='nuevoJuego.palabraIngresada' [ngModelOptions]="{standalone: true}"> es lo mas grande que hay, es nuestra religión, nuestra identidad"  </h1>
+        </div>
+
+        <div *ngIf=nuevoJuego.fraseCinco>
+            <h1>"Y si acaso no brillara el sol, y quedara yo atrapado aquí, no veria la razón de seguir <input type="text"  [(ngModel)]='nuevoJuego.palabraIngresada' [ngModelOptions]="{standalone: true}"> sin tu amor"</h1>
+                </div>        
+
+                
+    
+      <h2 [hidden]="ocultarVerificar" ><button (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button></h2>
+   
+    
+      <h2 [hidden]="!ocultarVerificar"><button  (click)="NuevoJuego()"  class="btn btn-info btn-lg" style="height: 150px; font-size: 60px;">Dame una frase de canción</button></h2>
+    
+    
+  </ul>
+  
+  </form>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br> <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <div id="snackbar">{{Mensajes}}</div>
+  </div>
