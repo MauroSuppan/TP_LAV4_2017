@@ -7,8 +7,18 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor() { }
-
+  usuario:string;
+  clave: string;
+  
+  constructor(private router: Router) { }
+  Registrar()
+  {
+   
+    localStorage.setItem("usuarioNuevo",this.usuario) ;
+    localStorage.setItem("claveNuevo",this.clave) ;
+    alert("se registro bien!!!");
+    this.router.navigate(['/Login']);
+  }
   ngOnInit() {
   }
 

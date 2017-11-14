@@ -1,4 +1,8 @@
 
+.fondo
+{
+    font-family: 'Kalam', cursive;
+}
 form {
     border: 50px solid lightpink;
     padding: 10px;

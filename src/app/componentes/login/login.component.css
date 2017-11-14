@@ -1,4 +1,7 @@
-
+.fondo
+{
+    background-color:lightblue;
+}
 form {
     border: 10px solid #f1f1f1;
     padding: 10px;
