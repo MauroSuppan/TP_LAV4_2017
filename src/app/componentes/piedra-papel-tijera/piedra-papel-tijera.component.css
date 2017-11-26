@@ -25,7 +25,7 @@
    
     color: black;
     
-    background: url("../../../assets/imagenes/piedraa.jpg") no-repeat; 
+    background: url("/TP_LAV4_2017/assets/imagenes/piedraa.jpg") no-repeat; 
     background-size: 326px 380px;
 
     border-color:red;
@@ -45,7 +45,7 @@
        
         color: black;
         
-        background: url("../../../assets/imagenes/papel.jpg") no-repeat; 
+        background: url("/TP_LAV4_2017/assets/imagenes/papel.jpg") no-repeat; 
         background-size: 326px 380px;
     
         border-color:red;
@@ -66,7 +66,7 @@
        
         color: black;
         
-        background: url("../../../assets/imagenes/tijera.jpg") no-repeat; 
+        background: url("/TP_LAV4_2017/assets/imagenes/tijera.jpg") no-repeat; 
         background-size: 326px 380px;
     
         border-color:red;
