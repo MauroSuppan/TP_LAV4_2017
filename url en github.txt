@@ -1,0 +1,6 @@
+https://maurosuppan.github.io/TP_LAV4_2017/
+
+cambio de iamgenes / colores (login cambio colores y botones , boton configuracion en menu principal 
+quien soy funcionando
+botones distintos.
+menu card modificar un poco (cambie boton "Jugar" y modifique el la carta de juego en menu-card)

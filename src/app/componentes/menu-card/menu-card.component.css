@@ -28,6 +28,11 @@ img {
 
 
 .button{
+
+   /*  background:('../assets/imagenes/lasestrellas1.jpg');*/
+
+  
+   
     margin-left: 1px;
     display: inline-block;
     width: 90%;
@@ -37,12 +42,14 @@ img {
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
-    border: none;
+    /*background-color: #4CAF50;*/
+    border-color:white;
+    border-width: 2px;
+    border-style: solid;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 9px red;
 
-    border: none;
+    
     outline: 0;
  
     padding: 8px;
@@ -59,4 +66,9 @@ img {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+  }
+
+  h1
+  {
+      color:#590303;
   }
